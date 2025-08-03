@@ -2,7 +2,7 @@
 
 TAR.UA is an innovative chat application that brings the power of AI to your fingertips. With its sleek dark-themed interface and advanced features, TAR.UA allows you to have meaningful conversations with an AI assistant, upload files for context-aware responses, and manage multiple conversations seamlessly.
 
-![TAR.UA Preview](https://pbs.twimg.com/media/GZUNEoVWMAAH-Xx.jpg)
+![TAR.UA Preview](/public/Screenshot%202025-08-03%20122916.png)
 
 ## Features
 
