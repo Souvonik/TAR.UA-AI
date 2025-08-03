@@ -65,7 +65,7 @@ const Index = () => {
           "Authorization": `Bearer ${localStorage.getItem("openRouterApiKey") || import.meta.env.VITE_OPENROUTER_API_KEY}`,
         },
         body: JSON.stringify({
-          model: "gryphe/mythomax-l2-13b",
+          model: "moonshotai/kimi-k2",
           messages: newMessages.map((msg) => ({
             role: msg.type === "ai" ? "assistant" : "user",
             content:

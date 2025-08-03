@@ -8,7 +8,7 @@ export const usePdfTextExtractor = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const extractText = async (file: File) => {
+  const extractText = async (file: File): Promise<string> => {
     setLoading(true);
     setError(null);
     setText('');
@@ -25,9 +25,11 @@ export const usePdfTextExtractor = () => {
       }
 
       setText(fullText);
+      return fullText;
     } catch (e) {
       setError('Failed to extract text from PDF.');
       console.error(e);
+      return "";
     } finally {
       setLoading(false);
     }

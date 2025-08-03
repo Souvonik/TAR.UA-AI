@@ -40,8 +40,7 @@ export const FileUpload = ({
 
       let text = "";
       if (file.type === "application/pdf") {
-        await extractText(file);
-        text = pdfText;
+        text = await extractText(file);
       } else if (file.type.startsWith("text/")) {
         text = await file.text();
       } else {
