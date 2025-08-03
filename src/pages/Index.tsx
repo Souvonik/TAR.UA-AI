@@ -4,6 +4,7 @@ import { ChatArea } from "@/components/ChatArea";
 import LightRays from "@/components/LightRays";
 import { ChatInput } from "@/components/ChatInput";
 import { Message } from "@/components/ChatMessage";
+import { FileList } from "@/components/FileList";
 
 interface Conversation {
   id: string;
@@ -143,6 +144,13 @@ const Index = () => {
         />
         <div className="flex-1 flex flex-col">
           <ChatArea messages={messages} isTyping={isTyping} />
+          <div className="p-4">
+            <FileList
+              fileName={selectedFile?.name || null}
+              fileType={selectedFile?.type || null}
+              onRemoveFile={() => setSelectedFile(null)}
+            />
+          </div>
           <ChatInput
             onSendMessage={handleSendMessage}
             onFileUploaded={handleFileUploaded}

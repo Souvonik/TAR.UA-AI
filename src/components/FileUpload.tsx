@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import { usePdfTextExtractor } from "@/hooks/usePdfTextExtractor";
 
 interface UploadedFile {
   name: string;
@@ -25,6 +26,12 @@ export const FileUpload = ({
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const { toast } = useToast();
+  const {
+    text: pdfText,
+    loading: pdfLoading,
+    error: pdfError,
+    extractText,
+  } = usePdfTextExtractor();
 
   const processFile = async (file: File) => {
     try {
@@ -33,8 +40,8 @@ export const FileUpload = ({
 
       let text = "";
       if (file.type === "application/pdf") {
-        // I will add PDF processing later
-        text = "PDF text extraction is not yet implemented.";
+        await extractText(file);
+        text = pdfText;
       } else if (file.type.startsWith("text/")) {
         text = await file.text();
       } else {
