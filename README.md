@@ -10,7 +10,7 @@ TAR.UA is an innovative chat application that brings the power of AI to your fin
 </table>
 
 ## Demo
-https://drive.google.com/file/d/1vb-ZJEtpBGvhQ4ygaLa5gUXmZUhBPzPP/view?usp=drive_link
+<i>https://drive.google.com/file/d/1vb-ZJEtpBGvhQ4ygaLa5gUXmZUhBPzPP/view?usp=drive_link<i>
 
 
 ## Features
