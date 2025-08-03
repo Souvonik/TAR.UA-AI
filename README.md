@@ -9,11 +9,7 @@ TAR.UA is an innovative chat application that brings the power of AI to your fin
   </tr>
 </table>
 
-## Video Preview
 
-<a href="https://drive.google.com/file/d/1vb-ZJEtpBGvhQ4ygaLa5gUXmZUhBPzPP/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-  
-</a>
 ## Features
 
 - **AI-Powered Conversations**: Engage with an intelligent AI assistant powered by OpenRouter API
