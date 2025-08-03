@@ -7,6 +7,8 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { LandingPage } from "./pages/LandingPage";
+import { ApiKeyPrompt } from "./pages/ApiKeyPrompt";
+import ChatWrapper from "./pages/ChatWrapper";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +21,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/chat" element={<Index />} />
+            <Route path="/api-key" element={<ApiKeyPrompt />} />
+            <Route path="/chat" element={<ChatWrapper />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -61,7 +61,7 @@ const Index = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+          "Authorization": `Bearer ${localStorage.getItem("openRouterApiKey") || import.meta.env.VITE_OPENROUTER_API_KEY}`,
         },
         body: JSON.stringify({
           model: "gryphe/mythomax-l2-13b",

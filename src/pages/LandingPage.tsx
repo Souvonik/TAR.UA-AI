@@ -10,7 +10,7 @@ export const LandingPage = () => {
         <h1 className="text-6xl font-bold mb-8">TAR.UA</h1>
         <p className="text-xl mb-8">Light the spark of innnovation</p>
         
-        <Link to="/chat">
+        <Link to="/api-key">
           <Button size="lg">Try Now</Button>
         </Link>
       </div>
