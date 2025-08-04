@@ -1,11 +1,28 @@
-import DarkVeil from '@/components/DarkVeil';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const LandingPage = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://unpkg.com/@splinetool/viewer@1.10.39/build/spline-viewer.js';
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-black">
-      <DarkVeil />
+      <spline-viewer
+        loading-anim-type="spinner-small-light"
+        url="https://prod.spline.design/eTeo6rfhLvn6n1dv/scene.splinecode"
+        className="absolute inset-0 w-full h-full z-0"
+        style={{ left: '15%' }}
+        events-target="global"
+      ></spline-viewer>
 
       <div className="absolute top-4 right-4 flex gap-4">
         <a
@@ -27,8 +44,8 @@ export const LandingPage = () => {
       </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-        <h1 className="text-6xl font-bold mb-8">TAR.UA</h1>
-        <p className="text-xl mb-8">Light the spark of innovation</p>
+        <h1 className="text-6xl font-bold mb-8"></h1>
+        <p className="text-xl mb-8"></p>
 
         <Link to="/api-key">
           <Button size="lg">Try Now</Button>
